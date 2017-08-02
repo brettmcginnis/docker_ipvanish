@@ -1,5 +1,5 @@
-# Private Internet Access
-Private Internet Access docker container
+# IPVANISH
+IPVANISH docker container
 
 ## Docker run usage
 ```Shell
