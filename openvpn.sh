@@ -2,8 +2,8 @@
 set -eu
 
 : ${REGION:?"Run 'docker run brettmcgin/ipvanish ls' to see the list of regions"}
-: ${USERNAME:?"Pass in '-e USERNAME='PIA Username''"}
-: ${PASSWORD:?"Pass in '-e PASSWORD='PIA Password''"}
+: ${USERNAME:?"Pass in '-e USERNAME='IPVANISH Username''"}
+: ${PASSWORD:?"Pass in '-e PASSWORD='IPVANISH Password''"}
 
 echo "$USERNAME" > auth.conf
 echo "$PASSWORD" >> auth.conf

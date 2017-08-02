@@ -6,19 +6,15 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
     wget \
-    unzip
+    unzip \
+    network-manager-openvpn
 
 ARG VPN_DIR=/etc/openvpn
-
-RUN mkdir -p ${VPN_DIR} && \
-    cd ${VPN_DIR}
 
 WORKDIR ${VPN_DIR}
 
 RUN wget https://www.ipvanish.com/software/configs/configs.zip && \
     unzip configs.zip
-
-RUN ls
 
 COPY openvpn.sh openvpn.sh
 

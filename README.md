@@ -4,11 +4,11 @@ Private Internet Access docker container
 ## Docker run usage
 ```Shell
 docker run \
-  --cap-add=NET_ADMIN
-  --device=/dev/net/tun
-  --name=pia \
-  -e 'USERNAME=PIA_USERNAME' \
-  -e 'PASSWORD=PIA_PASSWORD' \
+  --cap-add=NET_ADMIN \
+  --device=/dev/net/tun \
+  --name=ipvanish \
+  -e 'USERNAME=IPVANISH_USERNAME' \
+  -e 'PASSWORD=IPVANISH_PASSWORD' \
   brettmcgin/ipvanish
 ```
 
@@ -45,14 +45,11 @@ version: '2'
 ### Optional run flags
 ```yml
 services:
-  pia:
+  ipvanish:
     dns:
     # Google
     - 8.8.8.8
     - 8.8.4.4
-    # PIA Dns
-    - 209.222.18.222
-    - 209.222.18.218
 ```
 
 ## List Regions
