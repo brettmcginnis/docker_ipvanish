@@ -1,0 +1,25 @@
+services:
+  speedtest_torguard:
+    cap_add:
+    - NET_ADMIN
+    container_name: speedtest_torguard
+    devices:
+    - /dev/net/tun
+    dns:
+    - 1.1.1.1
+    - 1.0.0.1
+    environment:
+      REGION: USA.Seattle
+      USERNAME: ''
+      PASSWORD: ''
+    build:
+      context: .
+      dockerfile: Dockerfile
+    privileged: true
+  speedtest:
+    container_name: speedtest
+    build:
+      context: .
+      dockerfile: speedtest.Dockerfile
+    network_mode: service:speedtest_torguard
+version: '3.7'
