@@ -15,7 +15,7 @@ COPY 72.ovpn .
 
 COPY openvpn.sh openvpn.sh
 
-ENV REGION='72'
+ENV REGION='41'
 ENV USERNAME=''
 ENV PASSWORD=''
 
