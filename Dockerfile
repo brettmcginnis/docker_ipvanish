@@ -11,7 +11,7 @@ ARG VPN_DIR=/etc/openvpn
 
 WORKDIR ${VPN_DIR}
 
-COPY 72.ovpn .
+COPY *.ovpn ./
 
 COPY openvpn.sh openvpn.sh
 
