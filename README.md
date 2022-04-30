@@ -18,6 +18,12 @@ docker run \
   --dns 209.222.18.218 \
 ```
 
+### Regions
+
+After running [`ls`](#list-regions) to list regions, use `-e REGION=region` to specify the region to use, where `region` is the name of the IPVanish region `.ovpn` file without the extension.
+
+For example, `ipvanish-NL-Amsterdam-ams-a23.ovpn` would be `ipvanish-NL-Amsterdam-ams-a23` when specifying it at the region to use.
+
 ## Docker Compose
 ```yml
 services:
